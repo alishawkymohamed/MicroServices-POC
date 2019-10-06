@@ -32,7 +32,7 @@ namespace Actio.Api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromRoute]Guid id)
+        public async Task<IActionResult> Get(Guid id)
         {
             var activity = await _repository.GetAsync(id);
 
